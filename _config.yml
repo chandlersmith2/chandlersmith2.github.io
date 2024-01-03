@@ -222,6 +222,7 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
+  - jekyll-purgecss
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
@@ -231,6 +232,8 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+
+css_dir: "./css"
 
 # Sitemap settings
 defaults:
