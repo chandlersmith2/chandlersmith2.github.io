@@ -40,10 +40,9 @@ jobs:
         npm install -g purgecss
         export JEKYLL_ENV=production
         bundle exec jekyll build --lsi
-        purgecss -c purgecss.config.js
+        bash purgecss -c purgecss.config.js
     - name: Deploy 🚀
       if: github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: _site
-
