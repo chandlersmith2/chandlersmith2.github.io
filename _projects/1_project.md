@@ -1,18 +1,16 @@
 ---
 layout: page
 title: Euclidean Distance Geometry
-description: a project with a background image
+description: Point cloud recovery from partial pairwise distances
 img: assets/img/cow.jpg
 importance: 1
 category: work
 related_publications: Smith2023
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+In the applied sciences, a common measurement to make is the distance between objects, such as the distance between sensors in a network or the distance between atoms in a protein. A collection of distances contains a lot of powerful information; namely, if in a point cloud of $$n$$ objects in $$d$$ dimensions I know every distance between pairs of points, I can reconstruct the underlying object (up to translation/rotation.) The problem becomes considerably more interesting with access to only a few distances.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+More mathematically, consider a set of vectors $$\{\mathbf{p}_k\}_{k=1}^n \subset \mathbb{R}^d$$. From these vectors we can construct a matrix $$\mathbf{P} = [\mathbf{p}_1 ... \mathbf{p}_n]^T\in\mathbb{R}^{n\times d}$$. We seek to recover this matrix from entries of the squared distance matrix $$\mathbf{D} = [d_{ij}^2]= \Vert \mathbf{p}_i - \mathbf{p}_j\Vert_2^2$$.
 
     ---
     layout: page
