@@ -8,72 +8,17 @@ category: work
 related_publications: Smith2023
 ---
 
-In the applied sciences, a common measurement to make is the distance between objects, such as the distance between sensors in a network or the distance between atoms in a protein. A collection of distances contains a lot of powerful information; namely, if in a point cloud of $$n$$ objects in $$d$$ dimensions I know every distance between pairs of points, I can reconstruct the underlying object (up to translation/rotation.) The problem becomes considerably more interesting with access to only a few distances.
+In the applied sciences, a common measurement to make is the distance between objects, such as the distance between sensors in a network or the distance between atoms in a protein. A collection of distances contains a lot of powerful information; namely, if in a point cloud of $$n$$ objects in $$d$$ dimensions I know every pairwise distance between points, I can reconstruct the underlying object (up to translation/rotation.) The problem becomes considerably more interesting with access to only a few distances.
 
-More mathematically, consider a set of vectors $$\{\mathbf{p}_k\}_{k=1}^n \subset \mathbb{R}^d$$. From these vectors we can construct a matrix $$\mathbf{P} = [\mathbf{p}_1 ... \mathbf{p}_n]^T\in\mathbb{R}^{n\times d}$$. We seek to recover this matrix from entries of the squared distance matrix $$\mathbf{D} = [d_{ij}^2]= \Vert \mathbf{p}_i - \mathbf{p}_j\Vert_2^2$$.
+More mathematically, consider a set of vectors $$\{\mathbf{p}_k\}_{k=1}^n \subset \mathbb{R}^d$$. From these vectors we can construct a matrix $$\mathbf{P} = [\mathbf{p}_1 ... \mathbf{p}_n]^T\in\mathbb{R}^{n\times d}$$. We seek to recover this matrix from partial access to entries of the squared distance matrix $$\mathbf{D} = [d_{ij}^2]= \Vert \mathbf{p}_i - \mathbf{p}_j\Vert_2^2$$.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+This problem has a rich, well-studied history that I won't cover in this blurb (see Euclidean Distance Geometry by Liberti and Lavor for an excellent introduction). I'll provide a brief explanation as to my approach with Dr. Abiy Tasissa to study this problem.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+The first idea that one familiar with the compressive sensing/matrix completion literature of the 2010's would be to try and apply low-rank matrix completion directly on the squared distance matrix $$\mathbf{D}$$; after all, if one has many more points than dimensions (i.e. $$n \gg k$$) then $$\mathbf{D}$$ would be low-rank as $$\textrm{rank}(\mathbf{D})\leq k+2$$. This idea makes sense, but the only real issue is that distance matrices are notoriously finicky. Not only must the diagonals be zero, but more importantly the entries must satisfy a triangle inequality, which is a difficult condition to enforce.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+This leads one to consider other ways to complete the point cloud from the partial distances. In (Tasissa, Lai 2018), the authors consider translating the problem into a non-orthogonal completion over the Gram matrix $$\mathbf{X} = \mathb{PP}^T$$, still just relying on entries of $$\mathbf{D}$$, and provided nice guarantees for recovery when minimizing the nuclear norm of $$\mathbf{X}$$. This convex problem is slow, however, and non-convex algorithms provide more scalability.
 
+One prior that can be leveraged in ths problem is the fact that the target dimension $$k$$ is often known in practice: either 2 or 3. The set of matrices of a fixed rank forms a manifold, so one can consider minimizing a distance functional on that manifold to solve the problem. This is outlined in greater detail in our OPT-ML 2023 paper. Currently, we have a provably convergent algorithm to solve this problem in a local neighborhood of the solution, which will (hopefully!) be submitted and available on the arxiv in the coming weeks.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 ```
 {% endraw %}
