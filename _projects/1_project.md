@@ -20,5 +20,4 @@ This leads one to consider other ways to complete the point cloud from the parti
 
 One prior that can be leveraged in ths problem is the fact that the target dimension $$k$$ is often known in practice: either 2 or 3. The set of matrices of a fixed rank forms a manifold, so one can consider minimizing a distance functional on that manifold to solve the problem. This is outlined in greater detail in our OPT-ML 2023 paper. Currently, we have a provably convergent algorithm to solve this problem in a local neighborhood of the solution, which will (hopefully!) be submitted and available on the arxiv in the coming weeks.
 
-```
-{% endraw %}
+``
