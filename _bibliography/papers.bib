@@ -2,10 +2,28 @@
 ---
 
 @InProceedings{Smith2023,
-    title = {{Riemannian Optimization for Euclidean Distance Geometry}},
-    author = {{Smith, Chandler},{Tasissa, Abiy},{Cai, HanQin},{Lichtenberg, Samuel}},
+    title = {Riemannian Optimization for Euclidean Distance Geometry},
+    author = {Chandler Smith and Samuel Lichtenberg and Hanqin Cai and Abiy Tasissa},
     maintitle = {Conference on Neural Information Processing Systems},
     booktitle = {OPT-ML},
+    abstract = {The Euclidean distance geometry (EDG) problem is a crucial machine learning task that appears
+                in many applications. Utilizing the pairwise Euclidean distance information of a given point set,
+                EDG reconstructs the configuration of the point system. When only partial distance information
+                is available, matrix completion techniques can be incorporated to fill in the missing pairwise dis-
+                tances. In this paper, we propose a novel dual basis Riemannian gradient descent algorithm, coined
+                RieEDG, for the EDG completion problem. The numerical experiments verify the effectiveness
+                of the proposed algorithm. In particular, we show that RieEDG can precisely reconstruct various
+                datasets consisting of 2- and 3-dimensional points by accessing a small fraction of pairwise distance
+                information.},
     year = {2023},
-    url  = {https://opt-ml.org/papers/2023/paper67.pdf}
+    website  = {https://opt-ml.org/papers/2023/paper67.pdf},
+    pdf = {Chandler_SmithOPT2023.pdf},
+    poster = {RieEDG_Poster-1.pdf},
+    slides = {Candidacy_Exam_Slides.pdf}
+}
+
+@article{Smith2024,
+title = {A provably convergent fast Riemannian algorithm for EDG (in progress)},
+author = {Chandler Smith and HanQin Cai and Abiy Tasissa},
+year = {2024}
 }

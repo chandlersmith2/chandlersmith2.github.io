@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Math Ph.D. Student at <a href='https://math.tufts.edu/'>Tufts</a>
 
 profile:
   align: right
@@ -19,4 +19,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Welcome to my website! I'm a 3rd year Ph.D. student at Tufts University, working with Dr. Abiy Tasissa. My mathematical interests are in the general areas of optimization and probability, with my current emphasis being on geometric algorithms for machine learning.
+Welcome to my website! I'm a 3rd year Ph.D. student at Tufts University, working with <a href='https://abiy-tasissa.github.io/'>Dr. Abiy Tasissa</a>. My mathematical interests are in the general areas of optimization and probability, with my current emphasis being on geometric algorithms for machine learning, as well as a growing interest in computational solutions to inverse problems. Currently, I'm involved in developing fast algorithms for the Euclidean Distance Geometry problem, a relevant problem in sensor network localization, molecular geometry, and dimensionality reduction.
+
+Outside of math, I'm an avid sports watcher/player, with basketball and baseball being my two favorites.

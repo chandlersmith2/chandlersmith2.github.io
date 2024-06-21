@@ -1,9 +1,0 @@
-layout: post
-title:  What is going on with $$T$$ in matrix completion literature?
-date:   2024-6-20
-description: A summary of thoughts on how to better understand the "tangent space" structure ever-present in matrix completion
-tags: matrix-completion, optimization, riemannian-geometry
-categories: latest_posts
-
-
-$$T$$ is weird! I have some thoughts on this I plan on writing up in greater detail soon.

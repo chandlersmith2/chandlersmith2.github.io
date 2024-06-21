@@ -38,8 +38,8 @@
   type: time_table
   contents:
     - title: Fast Riemannian Algorithms for EDG.
-      year: 2015-now
-      description: Coming soon!
+      year: 2023-now
+      description: Fast matrix completion based methods for Euclidean Distance Geometry. See <a href="/projects/EDG/">here</a> for more details!
 
 #- title: Honors and Awards
   # type: time_table
