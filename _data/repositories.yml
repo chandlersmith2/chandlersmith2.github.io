@@ -2,5 +2,4 @@ github_users:
   - chandlersmith2
 
 github_repos:
-  - chandlersmith2/Riemannian_EDG
-  - chandlersmith2/RieEDG_nonuniform
+  - chandlersmith2/NonConvexEDMC
