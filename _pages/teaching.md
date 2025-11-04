@@ -7,7 +7,7 @@ nav: true
 nav_order: 6
 ---
 
--- Fall 2025 -- Lead instructor for Math 123 - Mathematical Aspects of Data Analysis. [See the lecture notes here]( /assets/pdf/Math 123 Lecture Notes.pdf)
+-- Fall 2025 -- Lead instructor for Math 123 - Mathematical Aspects of Data Analysis. [See the lecture notes here]( /assets/pdf/Math123Notes_Tufts_2025.pdf)
 
 -- Summer 2024 --- Lead instructor for Math 166 (Statistics) at Tufts University
 
