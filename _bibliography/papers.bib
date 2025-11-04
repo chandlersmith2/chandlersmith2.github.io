@@ -23,8 +23,7 @@
 }
 
 @article{Smith2024,
-title = {Riemannian Optimization for Non-convex Euclidean Distance Geometry with Global Recovery Guarantees (submitted)},
-journal = {IEEE Transactions on Information Theory},
+title = {Riemannian Optimization for Non-convex Euclidean Distance Geometry with Global Recovery Guarantees},
 abstract = {The problem of determining the configuration of points from partial distance information, known as the Euclidean Distance Geometry (EDG) problem, is fundamental to many tasks in the applied sciences. In this paper, we propose two algorithms grounded in the Riemannian optimization framework to address the EDG problem. Our approach formulates the problem as a low-rank matrix completion task over the Gram matrix, using partial measurements represented as expansion coefficients of the Gram matrix in a non-orthogonal basis. For the first algorithm, under a uniform sampling with replacement model for the observed distance entries, we demonstrate that, with high probability, a Riemannian gradient-like algorithm on the manifold of rank-$r$ matrices converges linearly to the true solution, given initialization via a one-step hard thresholding. This holds provided the number of samples, $m$, satisfies $m \geq O(n^{(7/4)}r^2 log(n))$. With a more refined initialization, achieved through resampled Riemannian gradient-like descent, we further improve this bound to $m \geq O(nr^2 log(n))$. Our analysis for the first algorithm leverages a non-self-adjoint operator and depends on deriving eigenvalue bounds for an inner product matrix of  restricted basis matrices, leveraging sparsity properties for tighter guarantees than previously established. The second algorithm introduces a self-adjoint surrogate for the sampling operator. This algorithm demonstrates strong numerical performance on both synthetic and real data. Furthermore, we show that optimizing over manifolds of higher-than-rank-$r$ matrices yields superior numerical results, consistent with recent literature on overparameterization in the EDG problem.},
 pdf = {Riemannian Optimization for Non-convex Euclidean Distance Geometry with Global Recovery Guarantees.pdf},
 author = {Chandler Smith and Hanqin Cai and Abiy Tasissa},
@@ -33,11 +32,19 @@ year = {2024}
 }
 
 @misc{smith2025provablenonconvexeuclideandistance,
-      title={Provable Non-Convex Euclidean Distance Matrix Completion: Geometry, Reconstruction, and Robustness},
+      title={Provable Non-Convex Euclidean Distance Matrix Completion: Geometry, Reconstruction, and Robustness (submitted)},
       author={Chandler Smith and HanQin Cai and Abiy Tasissa},
       year={2025},
       eprint={2508.00091},
+      abstract={The problem of recovering the configuration of points from their partial pairwise distances, referred to as the Euclidean Distance Matrix Completion (EDMC) problem, arises in a broad range of applications, including sensor network localization, molecular conformation, and manifold learning. In this paper, we propose a Riemannian optimization framework for solving the EDMC problem by formulating it as a low-rank matrix completion task over the space of positive semi-definite Gram matrices. The available distance measurements are encoded as expansion coefficients in a non-orthogonal basis, and optimization over the Gram matrix implicitly enforces geometric consistency through nonnegativity and the triangle inequality, a structure inherited from classical multidimensional scaling. Under a Bernoulli sampling model for observed distances, we prove that Riemannian gradient descent on the manifold of rank-r matrices locally converges linearly with high probability when the sampling probability satisfies $$p\geq O(\nu^2 r^2\log(n)/n)$$, where $$\nu$$ is an EDMC-specific incoherence parameter. Furthermore, we provide an initialization candidate using a one-step hard thresholding procedure that yields convergence, provided the sampling probability satisfies $$p \geq O(\nu r^{3/2}\log^{3/4}(n)/n^{1/4})$$. A key technical contribution of this work is the analysis of a symmetric linear operator arising from a dual basis expansion in the non-orthogonal basis, which requires a novel application of the Hanson-Wright inequality to establish an optimal restricted isometry property in the presence of coupled terms. Empirical evaluations on synthetic data demonstrate that our algorithm achieves competitive performance relative to state-of-the-art methods. Moreover, we provide a geometric interpretation of matrix incoherence tailored to the EDMC setting and provide robustness guarantees for our method. },
       archivePrefix={arXiv},
       primaryClass={math.OC},
-      url={https://arxiv.org/abs/2508.00091},
+      website={https://arxiv.org/abs/2508.00091},
+      pdf = {2508.00091v2.pdf}
+}
+
+@misc{smith2025optimalsampling,
+      title={Provable Convergence of Non-Uniform Sampling Models for Arbitrarily Poor Geometries in the Euclidean Distance Geometry Problem (in preparation)},
+      author={Chandler Smith and  Abiy Tasissa},
+      year={2025}
 }
