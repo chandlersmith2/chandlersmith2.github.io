@@ -31,15 +31,24 @@ website  = {https://arxiv.org/abs/2410.06376},
 year = {2024}
 }
 
-@misc{smith2025provablenonconvexeuclideandistance,
-      title={Provable Non-Convex Euclidean Distance Matrix Completion: Geometry, Reconstruction, and Robustness (submitted)},
+@article{smith2025provablenonconvexeuclideandistance,
+      title={Provable Non-Convex Euclidean Distance Matrix Completion: Geometry, Reconstruction, and Robustness},
       author={Chandler Smith and HanQin Cai and Abiy Tasissa},
-      year={2025},
+      year={2026},
+      journal={IEEE Transactions on Information Theory},
+      volume={72},
+      number={9},
+      pages={6993--7011},
+      month={September},
+      doi={10.1109/TIT.2026.3715063},
+      url={https://doi.org/10.1109/TIT.2026.3715063},
+      arxiv={2508.00091},
+      bibtex_show={true},
       eprint={2508.00091},
       abstract={The problem of recovering the configuration of points from their partial pairwise distances, referred to as the Euclidean Distance Matrix Completion (EDMC) problem, arises in a broad range of applications, including sensor network localization, molecular conformation, and manifold learning. In this paper, we propose a Riemannian optimization framework for solving the EDMC problem by formulating it as a low-rank matrix completion task over the space of positive semi-definite Gram matrices. The available distance measurements are encoded as expansion coefficients in a non-orthogonal basis, and optimization over the Gram matrix implicitly enforces geometric consistency through nonnegativity and the triangle inequality, a structure inherited from classical multidimensional scaling. Under a Bernoulli sampling model for observed distances, we prove that Riemannian gradient descent on the manifold of rank-r matrices locally converges linearly with high probability when the sampling probability satisfies $$p\geq O(\nu^2 r^2\log(n)/n)$$, where $$\nu$$ is an EDMC-specific incoherence parameter. Furthermore, we provide an initialization candidate using a one-step hard thresholding procedure that yields convergence, provided the sampling probability satisfies $$p \geq O(\nu r^{3/2}\log^{3/4}(n)/n^{1/4})$$. A key technical contribution of this work is the analysis of a symmetric linear operator arising from a dual basis expansion in the non-orthogonal basis, which requires a novel application of the Hanson-Wright inequality to establish an optimal restricted isometry property in the presence of coupled terms. Empirical evaluations on synthetic data demonstrate that our algorithm achieves competitive performance relative to state-of-the-art methods. Moreover, we provide a geometric interpretation of matrix incoherence tailored to the EDMC setting and provide robustness guarantees for our method. },
       archivePrefix={arXiv},
       primaryClass={math.OC},
-      website={https://arxiv.org/abs/2508.00091},
+      website={https://ieeexplore.ieee.org/document/11614566/},
       pdf = {2508.00091v2.pdf}
 }
 
